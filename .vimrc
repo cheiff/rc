@@ -1,0 +1,65 @@
+""""""""""""""""""""""""
+" Movement keys
+"""""""""""""""""""""""
+map <A-n> <Left>
+map <A-i> <Right>
+map <A-e> <Down>
+map <A-u> <Up>
+imap <A-n> <Left>
+imap <A-i> <Right>
+imap <A-e> <Down>
+imap <A-u> <Up>
+map <A-h> ^
+map <A-o> $
+map <A-k> <PageDown>
+map <A-y> <PageUp>
+imap <A-h> <Home>
+imap <A-o> <End>
+imap <A-k> <PageDown>
+imap <A-y> <PageUp>
+imap <A-Space> <Esc>
+"""""""""""""""""""
+" Tabs keys
+"""""""""""""""""""
+"map <A-t><up> :tabr<cr>
+"map <A-t><down> :tabl<cr>
+map <A-t> :tabp<cr>""gt
+map <A-s> :tabn<cr>""gT
+
+""""""""""""""""""""
+" Hack for Alt Key
+""""""""""""""""""""
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
+
+"colorscheme desert
+"set background=dark
+
+set timeout ttimeoutlen=50
+set nocompatible                " choose no compatibility with legacy vi
+syntax enable
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+filetype plugin indent on       " load file type plugins + indentation
+
+"" Whitespace
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
