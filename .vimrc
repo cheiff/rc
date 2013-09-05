@@ -42,8 +42,8 @@ endw
 " Enable syntax highlighting
 syntax enable
 
-"colorscheme desert
-"set background=dark
+colorscheme desert
+set background=dark
 
 set timeout ttimeoutlen=50
 set nocompatible                " choose no compatibility with legacy vi

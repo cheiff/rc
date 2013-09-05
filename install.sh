@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function backup_file {
+function backup_file () {
   if [ -f ~/$1 ]; then
     mv ~/$1 ~/$1.old
     echo "Backing up $1"
