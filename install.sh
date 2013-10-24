@@ -13,3 +13,4 @@ backup_file .vimrc
 backup_file .screenrc
 backup_file .tmux.conf
 
+sudo apt-get install tmux -y
