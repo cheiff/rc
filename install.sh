@@ -12,5 +12,6 @@ function backup_file {
 backup_file .vimrc
 backup_file .screenrc
 backup_file .tmux.conf
-
-sudo apt-get install tmux -y
+if [[ $(/usr/bin/id -u) -ne 999 ]]; then
+  sudo apt-get install tmux -y
+fi
