@@ -15,3 +15,5 @@ backup_file .tmux.conf
 if [[ $(/usr/bin/id -u) -ne 999 ]]; then
   sudo apt-get install tmux -y
 fi
+echo "Installing vim files"
+cp -rv ~/rc/.vim ~/
