@@ -6,6 +6,9 @@ map u k
 map <C-Space> <Esc>
 map <S-q> :q<cr>
 map <S-w> :w<cr>
+map <F5> <Esc>:EnableFastPHPFolds<Cr>
+map <F6> <Esc>:EnablePHPFolds<Cr>
+map <F7> <Esc>:DisablePHPFolds<Cr> 
                                                                                                                       
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
@@ -59,7 +62,6 @@ set background=dark
 
 set timeout ttimeoutlen=50
 set nocompatible                " choose no compatibility with legacy vi
-syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
