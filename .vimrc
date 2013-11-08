@@ -56,6 +56,7 @@ endw
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
+let php_folding=0
 
 colorscheme desert
 set background=dark
