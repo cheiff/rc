@@ -4,6 +4,8 @@
 map <S-u> :u<cr>
 map u k
 map <C-Space> <Esc>
+map <S-q> :q<cr>
+map <S-w> :w<cr>
                                                                                                                       
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
