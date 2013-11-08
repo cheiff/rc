@@ -1,3 +1,13 @@
+"""""
+" remappings for when alt does not work
+" undo remapped to shift u for using ext keyboard
+map <S-u> :u<cr>
+map u k
+map <C-Space> <Esc>
+                                                                                                                      
+""""""""""""""""""""""                                                                                                
+" The following keys don't work as Alt does not work
+
 """"""""""""""""""""""""
 " Movement keys
 """""""""""""""""""""""
