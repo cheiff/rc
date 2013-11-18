@@ -57,6 +57,7 @@ endw
 " Enable syntax highlighting
 syntax enable
 let php_folding=0
+autocmd FileType c setlocal foldmethod=syntax
 
 colorscheme desert
 set background=dark
@@ -78,3 +79,12 @@ set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+
+"""""""""" plugins """"""""
+"""""""""""""""""""""""""""
+execute pathogen#infect()
+
+""" Nerdtree """
+map <F2> :NERDTreeToggle<cr> 
+"""" Tags """"
+map <F3> :TlistToggle<cr> 

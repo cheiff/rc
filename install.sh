@@ -16,4 +16,9 @@ if [[ $(/usr/bin/id -u) -ne 999 ]]; then
   sudo apt-get install tmux -y
 fi
 echo "Installing vim files"
-cp -rv ~/rc/.vim ~/
+#cp -rv ~/rc/.vim ~/
+ln -s ~/rc/.vim ~/.vim
+cd ~/rc
+git submodule init
+git submodule update
+
