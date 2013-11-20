@@ -9,6 +9,7 @@ map <S-w> :w<cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr> 
+map <F4> <Esc>:tabs<Cr>
                                                                                                                       
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
