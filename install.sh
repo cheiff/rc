@@ -12,9 +12,11 @@ function backup_file {
 backup_file .vimrc
 backup_file .screenrc
 backup_file .tmux.conf
-if [[ $(/usr/bin/id -u) -ne 999 ]]; then
-  sudo apt-get install tmux -y
-  sudo apt-get install exuberant-ctags -y
+if [ $# = 0 ]; then 
+  if [[ $(/usr/bin/id -u) -ne 999 ]]; then
+    sudo apt-get install tmux -y
+    sudo apt-get install exuberant-ctags -y
+  fi
 fi
 echo "Installing vim files"
 #cp -rv ~/rc/.vim ~/
