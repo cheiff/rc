@@ -6,9 +6,16 @@ map u k
 map <C-Space> <Esc>
 map <S-q> :q<cr>
 map <S-w> :w<cr>
+""" Nerdtree """
+map <F2> :NERDTreeToggle<cr> 
+"""" Tags """"
+map <F3> :TlistToggle<cr> 
+map <F4> <Esc>:tabs<Cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr> 
+map <F8> <Esc>:tabnew.<Cr> 
+map <F9> <Esc>:cd %:h<Cr> 
                                                                                                                       
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
@@ -84,7 +91,3 @@ set smartcase                   " ... unless they contain at least one capital l
 """""""""""""""""""""""""""
 execute pathogen#infect()
 
-""" Nerdtree """
-map <F2> :NERDTreeToggle<cr> 
-"""" Tags """"
-map <F3> :TlistToggle<cr> 
