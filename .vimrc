@@ -16,6 +16,7 @@ map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr> 
 map <F8> <Esc>:tabnew.<Cr> 
 map <F9> <Esc>:cd %:h<Cr> 
+map <F10> <Esc>:set pastetoggle<Cr> 
                                                                                                                       
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
