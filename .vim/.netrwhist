@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/datos/www/gestion-hotel.es/components/com_jotel'
+let g:netrw_dirhist_2='/home/datos/www/gestion-hotel.es/components/com_gesthotel'
+let g:netrw_dirhist_3='/home/datos/www/gestion-hotel.es/administrator/components/com_sermepa'

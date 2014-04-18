@@ -18,29 +18,33 @@ map <F8> <Esc>:tabnew.<Cr>
 map <F9> <Esc>:cd %:h<Cr> 
 set pastetoggle=<F10>                                                                                                                      
 
+map ,, ci'
+map ,. ci"
+map ,m ci)
+
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
 
 """"""""""""""""""""""""
 " Movement keys
 """""""""""""""""""""""
-map <A-n> <Left>
-map <A-i> <Right>
-map <A-e> <Down>
-map <A-u> <Up>
-imap <A-n> <Left>
-imap <A-i> <Right>
-imap <A-e> <Down>
-imap <A-u> <Up>
-map <A-h> ^
-map <A-o> $
-map <A-k> <PageDown>
-map <A-y> <PageUp>
-imap <A-h> <Home>
-imap <A-o> <End>
-imap <A-k> <PageDown>
-imap <A-y> <PageUp>
-imap <A-Space> <Esc>
+"map <A-n> <Left>
+"map <A-i> <Right>
+"map <A-e> <Down>
+"map <A-u> <Up>
+"imap <A-n> <Left>
+"imap <A-i> <Right>
+"imap <A-e> <Down>
+"imap <A-u> <Up>
+"map <A-h> ^
+"map <A-o> $
+"map <A-k> <PageDown>
+"map <A-y> <PageUp>
+"imap <A-h> <Home>
+"imap <A-o> <End>
+"imap <A-k> <PageDown>
+"imap <A-y> <PageUp>
+"imap <A-Space> <Esc>
 """""""""""""""""""
 " Tabs keys
 """""""""""""""""""
@@ -92,3 +96,18 @@ set smartcase                   " ... unless they contain at least one capital l
 """""""""""""""""""""""""""
 execute pathogen#infect()
 
+"" Other 
+set cursorline
+set showmode " Display the current mode
+set number "Enable line numbers
+if has('statusline')
+    set laststatus=2
+
+" Broken down into easily includeable segments
+    set statusline=%<%f\ " Filename
+    set statusline+=%w%h%m%r " Options
+    "set statusline+=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ [%{&ff}/%Y] " Filetype
+    set statusline+=\ [%{getcwd()}] " Current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+endif

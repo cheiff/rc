@@ -1,0 +1,1 @@
+/home/sphinx/rc/.vim
