@@ -18,29 +18,32 @@ map <F8> <Esc>:tabnew.<Cr>
 map <F9> <Esc>:cd %:h<Cr> 
 set pastetoggle=<F10>                                                                                                                      
 
+map ,, ci'
+map ,. ci"
+
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
 
 """"""""""""""""""""""""
 " Movement keys
 """""""""""""""""""""""
-map <A-n> <Left>
-map <A-i> <Right>
-map <A-e> <Down>
-map <A-u> <Up>
-imap <A-n> <Left>
-imap <A-i> <Right>
-imap <A-e> <Down>
-imap <A-u> <Up>
-map <A-h> ^
-map <A-o> $
-map <A-k> <PageDown>
-map <A-y> <PageUp>
-imap <A-h> <Home>
-imap <A-o> <End>
-imap <A-k> <PageDown>
-imap <A-y> <PageUp>
-imap <A-Space> <Esc>
+"map <A-n> <Left>
+"map <A-i> <Right>
+"map <A-e> <Down>
+"map <A-u> <Up>
+"imap <A-n> <Left>
+"imap <A-i> <Right>
+"imap <A-e> <Down>
+"imap <A-u> <Up>
+"map <A-h> ^
+"map <A-o> $
+"map <A-k> <PageDown>
+"map <A-y> <PageUp>
+"imap <A-h> <Home>
+"imap <A-o> <End>
+"imap <A-k> <PageDown>
+"imap <A-y> <PageUp>
+"imap <A-Space> <Esc>
 """""""""""""""""""
 " Tabs keys
 """""""""""""""""""
