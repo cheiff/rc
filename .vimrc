@@ -20,6 +20,10 @@ set pastetoggle=<F10>
 
 map ,, ci'
 map ,. ci"
+<<<<<<< HEAD
+=======
+map ,m ci)
+>>>>>>> d8e073f5f7689d79798def086d7a4e37f18a6fbe
 
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
@@ -95,3 +99,18 @@ set smartcase                   " ... unless they contain at least one capital l
 """""""""""""""""""""""""""
 execute pathogen#infect()
 
+"" Other 
+set cursorline
+set showmode " Display the current mode
+set number "Enable line numbers
+if has('statusline')
+    set laststatus=2
+
+" Broken down into easily includeable segments
+    set statusline=%<%f\ " Filename
+    set statusline+=%w%h%m%r " Options
+    "set statusline+=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ [%{&ff}/%Y] " Filetype
+    set statusline+=\ [%{getcwd()}] " Current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+endif
