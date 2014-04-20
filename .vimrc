@@ -20,10 +20,7 @@ set pastetoggle=<F10>
 
 map ,, ci'
 map ,. ci"
-<<<<<<< HEAD
-=======
 map ,m ci)
->>>>>>> d8e073f5f7689d79798def086d7a4e37f18a6fbe
 
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
