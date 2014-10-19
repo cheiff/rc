@@ -21,6 +21,7 @@ fi
 echo "Installing vim files"
 #cp -rv ~/rc/.vim ~/
 ln -s ~/rc/.vim ~/.vim
+ln -s ~/rc/.tmux ~/.tmux
 cd ~/rc
 git submodule init
 git submodule update
