@@ -17,6 +17,8 @@ map <F7> <Esc>:DisablePHPFolds<Cr>
 map <F8> <Esc>:tabnew.<Cr> 
 map <F9> <Esc>:cd %:h<Cr> 
 set pastetoggle=<F10>                                                                                                                      
+""" todo-vim """
+nmap <F11> :TODOToggle<CR>
 
 map ,, ci'
 map ,. ci"
