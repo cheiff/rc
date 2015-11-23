@@ -96,6 +96,26 @@ set smartcase                   " ... unless they contain at least one capital l
 """""""""""""""""""""""""""
 execute pathogen#infect()
 
+"" Manual Plugins """"
+
+source ~/.vim/plugin/php-doc.vim
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR> 
+
+"" Syntastic ""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"" vim-airline ""
+let g:airline#extensions#tabline#enabled = 1
+
 "" Other 
 set cursorline
 set showmode " Display the current mode
