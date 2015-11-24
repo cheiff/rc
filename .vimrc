@@ -18,14 +18,14 @@ map <F8> <Esc>:tabnew.<Cr>
 map <F9> <Esc>:cd %:h<Cr> 
 set pastetoggle=<F10>                                                                                                                      
 """ todo-vim """
-nmap <F11> :TODOToggle<CR>
+nmap <Leader>t :TODOToggle<CR>
 
-map ,, ci'
-map ,. ci"
-map ,m ci)
+map <Leader>, ci'
+map <Leader>. ci"
+map <Leader>m ci)
 
-map ,v <Esc>:vsp.<Cr><C-w><C-r>
-map ,h <Esc>:sp.<Cr><C-w><C-r>
+map <Leader>v <Esc>:vsp.<Cr><C-w><C-r>
+map <Leader>h <Esc>:sp.<Cr><C-w><C-r>
 
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work

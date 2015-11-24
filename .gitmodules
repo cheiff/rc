@@ -40,9 +40,6 @@
 [submodule ".vim/bundle/vim-markdown-todo"]
 	path = .vim/bundle/vim-markdown-todo
 	url = https://github.com/gonzaloserrano/vim-markdown-todo.git
-[submodule ".vim/bundle/phpcomplete"]
-	path = .vim/bundle/phpcomplete
-	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule ".vim/bundle/todo-vim"]
 	path = .vim/bundle/todo-vim
 	url = https://github.com/vim-scripts/todo-vim.git
