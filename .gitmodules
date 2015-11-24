@@ -16,12 +16,6 @@
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/ack"]
 	path = .vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
@@ -37,9 +31,6 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule ".vim/bundle/vim-markdown-todo"]
-	path = .vim/bundle/vim-markdown-todo
-	url = https://github.com/gonzaloserrano/vim-markdown-todo.git
 [submodule ".vim/bundle/todo-vim"]
 	path = .vim/bundle/todo-vim
 	url = https://github.com/vim-scripts/todo-vim.git

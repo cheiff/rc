@@ -17,6 +17,10 @@ map <F7> <Esc>:DisablePHPFolds<Cr>
 map <F8> <Esc>:tabnew.<Cr> 
 map <F9> <Esc>:cd %:h<Cr> 
 set pastetoggle=<F10>                                                                                                                      
+
+"Leader
+:let mapleader = ","
+
 """ todo-vim """
 nmap <Leader>t :TODOToggle<CR>
 
@@ -137,8 +141,6 @@ if has('statusline')
     set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
 endif
 
-"Leader
-:let mapleader = ","
 
 
 
