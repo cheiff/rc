@@ -31,6 +31,17 @@ map <Leader>m ci)
 map <Leader>v <Esc>:vsp.<Cr><C-w><C-r>
 map <Leader>h <Esc>:sp.<Cr><C-w><C-r>
 
+" http://vimdoc.sourceforge.net/htmldoc/pattern.html#pattern
+" :-)
+map <Leader>r <Esc>/'\zs\<[a-zA-Z_-][a-zA-Z0-9_-]*\ze'<Cr>
+"map <Leader>s <Esc>/"\zs\<\h\w*\ze"<Cr>
+map <Leader>s <Esc>/"\zs\<[a-zA-Z_-][a-zA-Z0-9_-]*\ze"<Cr>
+map <Leader>t <Esc>/\.\zs\<\w*<Cr>
+map <Leader>a <Esc>/\<\k\w*<Cr>
+map <Leader>/ <Esc>:noh<Cr>
+map <Leader>q <Esc>/\<\h\w*\-*=<Cr>
+map <Leader>w <Esc>/<Cr>
+
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
 
@@ -120,10 +131,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-"" vim-airline ""
-let g:airline#extensions#tabline#enabled = 1
+let g:syntastic_check_on_wq = 1
 
 "" Other 
 set cursorline
