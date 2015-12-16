@@ -12,6 +12,8 @@ function backup_file {
 backup_file .vimrc
 backup_file .screenrc
 backup_file .tmux.conf
+backup_file .vim
+backup_file .tmux
 if [ $# = 0 ]; then 
   if [[ $(/usr/bin/id -u) -ne 999 ]]; then
     sudo apt-get install tmux ack-grep -y
@@ -25,4 +27,6 @@ ln -s ~/rc/.tmux ~/.tmux
 cd ~/rc
 git submodule init
 git submodule update
+
+
 
