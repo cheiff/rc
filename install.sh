@@ -28,5 +28,6 @@ cd ~/rc
 git submodule init
 git submodule update
 
-
+echo "GIT_PROMPT_ONLY_IN_REPO=1">> ~/.bashrc
+echo "source ~/rc/bash-git-prompt/gitprompt.sh">> ~/.bashrc
 

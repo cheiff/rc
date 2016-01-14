@@ -16,7 +16,8 @@ map <F6> <Esc>:EnablePHPFolds<Cr>
 map <F7> <Esc>:DisablePHPFolds<Cr> 
 map <F8> <Esc>:tabnew.<Cr> 
 map <F9> <Esc>:cd %:h<Cr> 
-set pastetoggle=<F10>                                                                                                                      
+set pastetoggle=<F10>
+set list
 
 "Leader
 :let mapleader = ","
@@ -150,7 +151,7 @@ if has('statusline')
 endif
 
 
-
+set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 
 " buffers
 :set hidden
