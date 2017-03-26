@@ -28,6 +28,7 @@ nmap <Leader>t :TODOToggle<CR>
 map <Leader>, ci'
 map <Leader>. ci"
 map <Leader>m ci)
+map <Leader>k ct<
 
 map <Leader>v <Esc>:vsp.<Cr><C-w><C-r>
 map <Leader>h <Esc>:sp.<Cr><C-w><C-r>
@@ -92,8 +93,9 @@ syntax enable
 let php_folding=0
 autocmd FileType c setlocal foldmethod=syntax
 
-colorscheme desert
+let g:solarized_termcolors=256
 set background=dark
+colorscheme solarized
 
 set timeout ttimeoutlen=50
 set nocompatible                " choose no compatibility with legacy vi

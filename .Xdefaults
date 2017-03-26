@@ -1,0 +1,47 @@
+!! cd /usr/lib/urxvt/perl; git clone https://github.com/muennich/urxvt-perls .
+!
+!! Perl extensions 
+#URxvt.perl-ext-common: default,clipboard,matcher,keyboard-select
+
+!! URLs
+#URxvt.keysym.C-U: perl:url-select:select_next
+URxvt.url-launcher: /usr/bin/firefox -new-tab
+URxvt.underlineURLs: True
+URxvt.matcher.button: 1
+
+!! Copy-Paste
+#URxvt.clipboard.autocopy: true
+#URxvt.keysym.M-Escape: perl:keyboard-select:activate
+#URxvt.keysym.C-C: perl:clipboard:copy
+#URxvt.keysym.C-V: perl:clipboard:paste
+#URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+#URxvt.copyCommand: xsel -ib
+#URxvt.pasteCommand: xsel -ob
+
+!! Misc
+URxvt.scrollstyle: rxvt
+URxvt.scrollBar: false
+
+!! Style and Colours
+
+Rxvt*font: xft:Monospace:pixelsize=13
+URxvt.iso14755:         False
+URxvt*foreground: white
+URxvt*background: black
+
+ *color0:  #2E3436
+ *color1:  #a40000
+ *color2:  #4E9A06
+ *color3:  #C4A000
+ *color4:  #3465A4
+ *color5:  #75507B
+ *color6:  #ce5c00
+ *color7:  #babdb9
+ *color8:  #555753
+ *color9:  #EF2929
+ *color10: #8AE234
+ *color11: #FCE94F
+ *color12: #729FCF
+ *color13: #AD7FA8
+ *color14: #fcaf3e
+*color15: #EEEEEC
