@@ -18,6 +18,7 @@ if [ $# = 0 ]; then
   if [[ $(/usr/bin/id -u) -ne 999 ]]; then
     sudo apt-get install tmux ack-grep -y
     sudo apt-get install exuberant-ctags -y
+    sudo apt-get install rxvt-unicode-256color ncurses-term -y
   fi
 fi
 echo "Installing vim files"
@@ -30,4 +31,5 @@ git submodule update
 
 echo "GIT_PROMPT_ONLY_IN_REPO=1">> ~/.bashrc
 echo "source ~/rc/bash-git-prompt/gitprompt.sh">> ~/.bashrc
+
 
