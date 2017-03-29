@@ -29,7 +29,11 @@ cd ~/rc
 git submodule init
 git submodule update
 
-echo "GIT_PROMPT_ONLY_IN_REPO=1">> ~/.bashrc
-echo "source ~/rc/bash-git-prompt/gitprompt.sh">> ~/.bashrc
+echo "GIT_PROMPT_ONLY_IN_REPO=1" >> ~/.bashrc
+#echo "source ~/rc/bash-git-prompt/gitprompt.sh" >> ~/.bashrc
+mkdir -p ~/.config
+ln -s ~/rc/base16-shell ~/.config/base16-shell
 
-
+echo "BASE16_SHELL=$HOME/.config/base16-shell/ " >> ~/.bashrc
+echo '[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"' >> ~/.bashrc
+echo "base16_default-dark" >> ~/.bashrc
