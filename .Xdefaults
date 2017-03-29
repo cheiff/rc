@@ -24,8 +24,8 @@ URxvt.scrollBar: false
 
 !! Style and Colours
 
-Rxvt*font: xft:Monospace:pixelsize=12
-URxvt.letterSpace: -2
+Rxvt*font: xft:Inconsolata:pixelsize=13
+URxvt.letterSpace: -1
 URxvt.iso14755:         False
 # URxvt*foreground: white
 # URxvt*background: black
