@@ -1,26 +1,30 @@
 "Leader
 :let mapleader = ","
-
 """""
-" remappings for when alt does not work
 " undo remapped to shift u for using ext keyboard
 map <S-u> :u<cr>
 map u k
-map <C-Space> <Esc>
+
+"inoremap nn <Esc>`^
+"imap <S-> <Esc>
+"imap nn <Esc>
 map <S-q> :q<cr>
 map <S-w> :w<cr>
 """ Nerdtree """
-map <F2> :NERDTreeToggle<cr> 
+map <Leader><F2> :NERDTreeToggle<cr> 
 """" Tags """"
-map <F3> :TlistToggle<cr> 
-map <F4> <Esc>:tabs<Cr>
-map <F5> <Esc>:EnableFastPHPFolds<Cr>
-map <F6> <Esc>:EnablePHPFolds<Cr>
-map <F7> <Esc>:DisablePHPFolds<Cr> 
+map <Leader><F3> :TlistToggle<cr> 
+map <Leader><F4> <Esc>:tabs<Cr>
+map <Leader><F5> <Esc>:EnableFastPHPFolds<Cr>
+map <Leader><F6> <Esc>:EnablePHPFolds<Cr>
+map <Leader><F7> <Esc>:DisablePHPFolds<Cr> 
 map <F8> <Esc>:tabnew.<Cr> 
 map <F9> <Esc>:cd %:h<Cr> 
-set pastetoggle=<F10>
+nmap <leader>w :w!<cr>
+
+set pastetoggle=<F11>
 set list
+
 
 """ todo-vim """
 nmap <Leader>t :TODOToggle<CR>
@@ -28,7 +32,6 @@ nmap <Leader>t :TODOToggle<CR>
 map <Leader>, ci'
 map <Leader>. ci"
 map <Leader>m ci)
-map <Leader>k ct<
 
 map <Leader>v <Esc>:vsp.<Cr><C-w><C-r>
 map <Leader>h <Esc>:sp.<Cr><C-w><C-r>
@@ -42,7 +45,6 @@ map <Leader>t <Esc>/\.\zs\<\w*<Cr>
 map <Leader>a <Esc>/\<\k\w*<Cr>
 map <Leader>/ <Esc>:noh<Cr>
 map <Leader>q <Esc>/\<\h\w*\-*=<Cr>
-map <Leader>w <Esc>/<Cr>
 
 """"""""""""""""""""""                                                                                                
 " The following keys don't work as Alt does not work
@@ -78,12 +80,12 @@ map <A-s> :tabn<cr>""gT
 """"""""""""""""""""
 " Hack for Alt Key
 """"""""""""""""""""
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+"let c='a'
+"while c <= 'z'
+"  exec "set <A-".c.">=\e".c
+"  exec "imap \e".c." <A-".c.">"
+"  let c = nr2char(1+char2nr(c))
+"endw
 """"""""""""""""""""
 
 set timeout ttimeoutlen=50
@@ -148,12 +150,12 @@ set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 :set hidden
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
-" \l       : list buffers
-" \b \f \g : go back/forward/last-used
+nnoremap \l       : list buffers
+nnoremap \b \f \g : go back/forward/last-used
 " \1 \2 \3 : go to buffer 1/2/3 etc
-nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>n :bn<CR>
+"nnoremap <Leader>l :ls<CR>
+"nnoremap <Leader>b :bp<CR>
+"nnoremap <Leader>n :bn<CR>
 "#nnoremap <Leader>k :b#<CR>
 "#nnoremap <Leader>g :e#<CR>
 "#nnoremap <Leader>1 :1b<CR>
@@ -169,11 +171,11 @@ nnoremap <Leader>n :bn<CR>
 " It's useful to show the buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
-let c = 1
-while c <= 99
-  execute "nnoremap " . c . "gb :" . c . "b\<CR>"
-  let c += 1
-endwhile
+"let c = 1
+"while c <= 99
+"  execute "nnoremap " . c . "gb :" . c . "b\<CR>"
+"  let c += 1
+"endwhile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -183,6 +185,10 @@ syntax enable
 let php_folding=0
 autocmd FileType c setlocal foldmethod=syntax
 
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
+"let g:solarized_termcolors=256
+let base16colorspace=256
+colorscheme base16-default-dark
+"colorscheme desert
+"colorscheme solarized
+"set background=dark
+"imap ;; <Esc>`^
