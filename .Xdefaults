@@ -24,7 +24,7 @@ URxvt.scrollBar: false
 
 !! Style and Colours
 
-Rxvt*font: xft:Inconsolata:pixelsize=13
+Rxvt*font: xft:UbuntuMono:pixelsize=15
 URxvt.letterSpace: -1
 URxvt.iso14755:         False
 # URxvt*foreground: white

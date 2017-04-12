@@ -1,3 +1,6 @@
+"Leader
+:let mapleader = ","
+
 """""
 " remappings for when alt does not work
 " undo remapped to shift u for using ext keyboard
@@ -18,9 +21,6 @@ map <F8> <Esc>:tabnew.<Cr>
 map <F9> <Esc>:cd %:h<Cr> 
 set pastetoggle=<F10>
 set list
-
-"Leader
-:let mapleader = ","
 
 """ todo-vim """
 nmap <Leader>t :TODOToggle<CR>
@@ -85,17 +85,6 @@ while c <= 'z'
   let c = nr2char(1+char2nr(c))
 endw
 """"""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
-let php_folding=0
-autocmd FileType c setlocal foldmethod=syntax
-
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
 
 set timeout ttimeoutlen=50
 set nocompatible                " choose no compatibility with legacy vi
@@ -185,3 +174,15 @@ while c <= 99
   execute "nnoremap " . c . "gb :" . c . "b\<CR>"
   let c += 1
 endwhile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
+let php_folding=0
+autocmd FileType c setlocal foldmethod=syntax
+
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
