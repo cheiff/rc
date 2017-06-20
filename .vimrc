@@ -192,3 +192,5 @@ colorscheme base16-default-dark
 "colorscheme solarized
 "set background=dark
 "imap ;; <Esc>`^
+"mouse support
+set mouse=a
