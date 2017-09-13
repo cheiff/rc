@@ -7,9 +7,6 @@
 [submodule ".tmux/plugins/tmux-logging"]
 	path = .tmux/plugins/tmux-logging
 	url = https://github.com/tmux-plugins/tmux-logging
-[submodule ".vim/bundle/vim-simple-todo"]
-	path = .vim/bundle/vim-simple-todo
-	url = https://github.com/vitalk/vim-simple-todo
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -31,9 +28,6 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule ".vim/bundle/todo-vim"]
-	path = .vim/bundle/todo-vim
-	url = https://github.com/vim-scripts/todo-vim.git
 [submodule "bash-git-prompt"]
 	path = bash-git-prompt
 	url = https://github.com/magicmonty/bash-git-prompt.git
@@ -49,3 +43,6 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git

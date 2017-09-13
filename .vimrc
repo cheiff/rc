@@ -5,11 +5,10 @@
 map <S-u> :u<cr>
 map u k
 
+cnoreabbrev W w
 "inoremap nn <Esc>`^
 "imap <S-> <Esc>
 "imap nn <Esc>
-map <S-q> :q<cr>
-map <S-w> :w<cr>
 """ Nerdtree """
 map <Leader><F2> :NERDTreeToggle<cr> 
 """" Tags """"
@@ -46,7 +45,21 @@ map <Leader>a <Esc>/\<\k\w*<Cr>
 map <Leader>/ <Esc>:noh<Cr>
 map <Leader>q <Esc>/\<\h\w*\-*=<Cr>
 
-""""""""""""""""""""""                                                                                                
+set relativenumber
+" From https://dougblack.io/words/a-good-vimrc.html
+" space open/closes folds
+nnoremap <space> za
+" highlight last inserted text
+nnoremap gV `[v`]
+" save session
+nnoremap <leader>s :mksession<CR>
+"
+" CtrlP settings
+"let g:ctrlp_match_window = 'bottom,order:ttb'
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
 " The following keys don't work as Alt does not work
 
 """"""""""""""""""""""""
@@ -192,5 +205,6 @@ colorscheme base16-default-dark
 "colorscheme solarized
 "set background=dark
 "imap ;; <Esc>`^
-"mouse support
+
+"mouse support - don't ever enable it
 "set mouse=a

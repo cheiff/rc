@@ -51,7 +51,7 @@ static const char *termcmd[]  = { "x-terminal-emulator", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_a,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_n,      focusstack,     {.i = +1 } },
@@ -83,12 +83,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	TAGKEYS(                        XK_z,                      9)
-	TAGKEYS(                        XK_x,                      10)
-	TAGKEYS(                        XK_s,                      11)
-	TAGKEYS(                        XK_v,                      12)
-	TAGKEYS(                        XK_w,                      13)
-	TAGKEYS(                        XK_e,                      14)
+	TAGKEYS(                        XK_q,                      9)
+	TAGKEYS(                        XK_w,                      10)
+	TAGKEYS(                        XK_a,                      11)
+	TAGKEYS(                        XK_r,                      12)
+	TAGKEYS(                        XK_z,                      13)
+	TAGKEYS(                        XK_x,                      14)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
