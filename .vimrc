@@ -193,4 +193,4 @@ colorscheme base16-default-dark
 "set background=dark
 "imap ;; <Esc>`^
 "mouse support
-set mouse=a
+"set mouse=a
