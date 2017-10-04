@@ -14,7 +14,7 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1-Develop", "2", "3-Staging", "4", "5-Production", "6", "7-LocalTerm", "8", "9", "FileManager", "Comms", "FFox-IT", "FFox-PM", "FFox-Wiki", "Email"};
+static const char *tags[] = { "1-Main", "2", "3", "4", "5", "6-IT", "7-PM", "8-Wiki", "9-FileManager", "Comms", "Email"};
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -85,10 +85,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	TAGKEYS(                        XK_z,                      9)
 	TAGKEYS(                        XK_x,                      10)
-	TAGKEYS(                        XK_s,                      11)
-	TAGKEYS(                        XK_v,                      12)
-	TAGKEYS(                        XK_w,                      13)
-	TAGKEYS(                        XK_e,                      14)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
