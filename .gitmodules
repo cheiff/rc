@@ -58,3 +58,18 @@
 [submodule ".vim/bundle/PIV"]
 	path = .vim/bundle/PIV
 	url = https://github.com/spf13/PIV.git
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/vim-snipmate"]
+	path = .vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/snippets"]
+	path = .vim/snippets
+	url = https://github.com/spf13/snipmate-snippets.git
+[submodule ".vim/bundle/vim-bufkill"]
+	path = .vim/bundle/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill
