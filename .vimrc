@@ -10,16 +10,15 @@ cnoreabbrev W w
 "imap <S-> <Esc>
 "imap nn <Esc>
 """ Nerdtree """
-map <Leader><F2> :NERDTreeToggle<cr> 
+map <Leader>1 <Esc>:NERDTreeToggle<cr> 
 """" Tags """"
-map <Leader><F3> :TlistToggle<cr> 
-map <Leader><F4> <Esc>:tabs<Cr>
-map <Leader><F5> <Esc>:EnableFastPHPFolds<Cr>
-map <Leader><F6> <Esc>:EnablePHPFolds<Cr>
-map <Leader><F7> <Esc>:DisablePHPFolds<Cr> 
+map <Leader>2 <Esc>:TlistToggle<cr> 
+map <Leader>3 <Esc>:tabs<Cr>
+map <Leader>4 <Esc>:EnableFastPHPFolds<Cr>
+map <Leader>5 <Esc>:EnablePHPFolds<Cr>
+map <Leader>6 <Esc>:DisablePHPFolds<Cr> 
 map <F8> <Esc>:tabnew.<Cr> 
 map <F9> <Esc>:cd %:h<Cr> 
-nmap <leader>w :w!<cr>
 
 set pastetoggle=<F11>
 set list
@@ -46,6 +45,7 @@ map <Leader>/ <Esc>:noh<Cr>
 map <Leader>q <Esc>/\<\h\w*\-*=<Cr>
 
 set relativenumber
+let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree','tlist']
 " From https://dougblack.io/words/a-good-vimrc.html
 " space open/closes folds
 nnoremap <space> za
@@ -55,12 +55,12 @@ nnoremap gV `[v`]
 nnoremap <leader>s :mksession<CR>
 "
 " CtrlP settings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+"let g:ctrlp_map = '<c-q>'
+"let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_match_window = 'bottom,order:ttb'
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " The following keys don't work as Alt does not work
 
@@ -128,9 +128,9 @@ execute pathogen#infect()
 "" Manual Plugins """"
 
 source ~/.vim/plugin/php-doc.vim
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
-vnoremap <C-P> :call PhpDocRange()<CR> 
+inoremap <C-b> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-b> :call PhpDocSingle()<CR>
+vnoremap <C-b> :call PhpDocRange()<CR> 
 
 "" Syntastic ""
 set statusline+=%#warningmsg#
