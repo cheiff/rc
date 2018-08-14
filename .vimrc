@@ -20,7 +20,7 @@ map <Leader>4 <Esc>:EnableFastPHPFolds<Cr>
 map <Leader>5 <Esc>:EnablePHPFolds<Cr>
 map <Leader>6 <Esc>:DisablePHPFolds<Cr> 
 map <F8> <Esc>:tabnew.<Cr> 
-map <F9> <Esc>:cd %:h<Cr> 
+"map <F9> <Esc>:cd %:h<Cr> 
 
 set pastetoggle=<F11>
 set list
@@ -30,7 +30,7 @@ set scrolloff=5
 """ todo-vim """
 nmap <Leader>t :TODOToggle<CR>
 
-map <Leader>, ci'
+map <Leader>k ci'
 map <Leader>. ci"
 map <Leader>m ci)
 
@@ -114,7 +114,9 @@ filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
 set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
+"set ts=4
+set noet
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -203,12 +205,6 @@ set background=dark
 syntax enable
 let php_folding=0
 autocmd FileType c setlocal foldmethod=syntax
-"let g:solarized_termcolors=256
-""let base16colorspace=256
-"set term=xterm-256color
-""colorscheme base16-default-dark
-"colorscheme desert
-"colorscheme solarized
 colorscheme gruvbox
 
 "imap ;; <Esc>`^
@@ -226,7 +222,8 @@ ino {;<CR> {<CR>};<ESC>O
 "disable autocomplete
 map <Leader>z :let g:ycm_largefile=1
 map <Leader>x :unlet g:ycm_largefile
-set ts=4
-set noet
+
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
+"crtlp"
+set runtimepath^=~/.vim/bundle/ctrlp.vim
