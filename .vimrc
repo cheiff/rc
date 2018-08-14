@@ -1,6 +1,8 @@
 "Leader
 :let mapleader = ","
 """""
+
+
 " undo remapped to shift u for using ext keyboard
 map <S-u> :u<cr>
 map u k
@@ -22,6 +24,7 @@ map <F9> <Esc>:cd %:h<Cr>
 
 set pastetoggle=<F11>
 set list
+set scrolloff=5
 
 
 """ todo-vim """
@@ -196,17 +199,34 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
+set background=dark
 syntax enable
 let php_folding=0
 autocmd FileType c setlocal foldmethod=syntax
-
 "let g:solarized_termcolors=256
-let base16colorspace=256
-colorscheme base16-default-dark
+""let base16colorspace=256
+"set term=xterm-256color
+""colorscheme base16-default-dark
 "colorscheme desert
 "colorscheme solarized
-"set background=dark
+colorscheme gruvbox
+
 "imap ;; <Esc>`^
 
 "mouse support - don't ever enable it
 "set mouse=a
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
+ino {;<CR> {<CR>};<ESC>O
+
+"disable autocomplete
+map <Leader>z :let g:ycm_largefile=1
+map <Leader>x :unlet g:ycm_largefile
+set ts=4
+set noet
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
