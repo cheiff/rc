@@ -1,0 +1,71 @@
+Xft.dpi: 150
+!! cd /usr/lib/urxvt/perl; git clone https://github.com/muennich/urxvt-perls .
+!
+!! Perl extensions 
+!!URxvt.perl-ext-common: default,clipboard,matcher,keyboard-select
+
+!! URLs
+!!URxvt.keysym.C-U: perl:url-select:select_next
+URxvt.url-launcher: /usr/bin/firefox -new-tab
+URxvt.underlineURLs: True
+URxvt.matcher.button: 1
+
+!! Copy-Paste
+!!URxvt.clipboard.autocopy: true
+!!URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!!URxvt.keysym.C-C: perl:clipboard:copy
+!!URxvt.keysym.C-V: perl:clipboard:paste
+!!URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+!!URxvt.copyCommand: xsel -ib
+!!URxvt.pasteCommand: xsel -ob
+
+!! Misc
+URxvt.scrollstyle: rxvt
+URxvt.scrollBar: false
+
+!! Style and Colours
+
+Rxvt*font: xft:UbuntuMono:pixelsize=21
+URxvt.letterSpace: -1
+URxvt.iso14755:         False
+
+!!urxvt.perl-lib:                     ~/.config/urxvt/font
+!!urxvt.keysym.Control-Shift-Up:      perl:font:increment
+!!urxvt.keysym.Control-Shift-Down:    perl:font:decrement
+!!urxvt.perl-ext-common:              font
+!! /* Fonts */
+!!urxvt*boldColors: on
+!!urxvt*font:     xft:Monaco:pixelsize=20:antialias=true:hinting=true:medium
+!!urxvt*boldFont: xft:Monaco:pixelsize=20:antialias=true:hinting=true:bold
+!!! vim:ft=xdefaults
+!! This colors make the theme gruvbox work in vim!!
+URxvt.color24:  #076678
+URxvt.color66:  #427b58
+URxvt.color88:  #9d0006
+URxvt.color96:  #8f3f71
+URxvt.color100: #79740e
+URxvt.color108: #8ec07c
+URxvt.color109: #83a598
+URxvt.color130: #af3a03
+URxvt.color136: #b57614
+URxvt.color142: #b8bb26
+URxvt.color167: #fb4934
+URxvt.color175: #d3869b
+URxvt.color208: #fe8019
+URxvt.color214: #fabd2f
+URxvt.color223: #ebdbb2
+URxvt.color228: #f2e5bc
+URxvt.color229: #fbf1c7
+URxvt.color230: #f9f5d7
+URxvt.color234: #1d2021
+URxvt.color235: #282828
+URxvt.color236: #32302f
+URxvt.color237: #3c3836
+URxvt.color239: #504945
+URxvt.color241: #665c54
+URxvt.color243: #7c6f64
+URxvt.color244: #928374
+URxvt.color245: #928374
+URxvt.color246: #a89984
+URxvt.color248: #bdae93
+URxvt.color250: #d5c4a1
