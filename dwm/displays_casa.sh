@@ -1,1 +1,1 @@
-xrandr --output DP1 --above eDP1 --auto
+xrandr --output DP-1 --above eDP-1 --auto
