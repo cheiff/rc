@@ -230,3 +230,6 @@ set ts=4
 set noet
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
+""set langmap=hk,jh,kj
+set langmap=hk,j`,kj,`h
+nnoremap K L
