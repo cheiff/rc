@@ -1,5 +1,5 @@
 "Leader
-:let mapleader = ","
+let mapleader = ","
 """""
 
 
@@ -30,7 +30,7 @@ set scrolloff=5
 """ todo-vim """
 nmap <Leader>t :TODOToggle<CR>
 
-map <Leader>, ci'
+map <Leader>e ci'
 map <Leader>. ci"
 map <Leader>m ci)
 
@@ -114,8 +114,6 @@ filetype plugin indent on       " load file type plugins + indentation
 
 "" Whitespace
 set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
-set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -144,6 +142,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers = ['jslint', 'phpcs', 'phpmd']
 
 "" Other 
 set cursorline
@@ -165,7 +165,7 @@ endif
 set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 
 " buffers
-:set hidden
+set hidden
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
 nnoremap \l       : list buffers
@@ -226,8 +226,9 @@ ino {;<CR> {<CR>};<ESC>O
 "disable autocomplete
 map <Leader>z :let g:ycm_largefile=1
 map <Leader>x :unlet g:ycm_largefile
-set ts=4
-set noet
+
+" this sets tabs at 4 spaces
+set noet ci pi sts=0 sw=4 ts=4
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
 ""set langmap=hk,jh,kj
