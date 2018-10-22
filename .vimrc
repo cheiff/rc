@@ -27,8 +27,6 @@ set list
 set scrolloff=5
 
 
-""" todo-vim """
-nmap <Leader>t :TODOToggle<CR>
 
 map <Leader>e ci'
 map <Leader>. ci"
@@ -170,24 +168,9 @@ set hidden
 " delay before pressing "p" would accidentally paste).
 nnoremap \l       : list buffers
 nnoremap \b \f \g : go back/forward/last-used
-" \1 \2 \3 : go to buffer 1/2/3 etc
-"nnoremap <Leader>l :ls<CR>
-"nnoremap <Leader>b :bp<CR>
-"nnoremap <Leader>n :bn<CR>
-"#nnoremap <Leader>k :b#<CR>
-"#nnoremap <Leader>g :e#<CR>
-"#nnoremap <Leader>1 :1b<CR>
-"#nnoremap <Leader>2 :2b<CR>
-"#nnoremap <Leader>3 :3b<CR>
-"#nnoremap <Leader>4 :4b<CR>
-"#nnoremap <Leader>5 :5b<CR>
-"#nnoremap <Leader>6 :6b<CR>
-"#nnoremap <Leader>7 :7b<CR>
-"#nnoremap <Leader>8 :8b<CR>
-"#nnoremap <Leader>9 :9b<CR>
-"#nnoremap <Leader>0 :10b<CR>
+
 " It's useful to show the buffer number in the status line.
-set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+""set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 "let c = 1
 "while c <= 99
@@ -196,19 +179,44 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 "endwhile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Splits
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set splitbelow								 "Make splits default to below...
+set splitright 								 "And to the right. This feels more natural.
+nmap <C-j> <C-w><C-j>
+nmap <C-k> <C-w><C-k>
+nmap <C-l> <C-w><C-l>
+nmap <C-h> <C-w><C-h>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 set background=dark
 syntax enable
 let php_folding=0
-autocmd FileType c setlocal foldmethod=syntax
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autosourcing
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+augroup autosourcing
+	autocmd!
+	autocmd FileType c setlocal foldmethod=syntax
+	autocmd BufWritePost .vimrc source %
+augroup END
 colorscheme gruvbox
 
 "imap ;; <Esc>`^
 
 "mouse support - don't ever enable it
 "set mouse=a
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autoclose quotes, brackets, etc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 ino " ""<left>
 ino ' ''<left>
 ino ( ()<left>
@@ -217,13 +225,21 @@ ino { {}<left>
 ino {<CR> {<CR>}<ESC>O
 ino {;<CR> {<CR>};<ESC>O
 
-"disable autocomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"disable autocomplete for largefiles
 map <Leader>z :let g:ycm_largefile=1
 map <Leader>x :unlet g:ycm_largefile
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " this sets tabs at 4 spaces
-set noet ci pi sts=0 sw=4 ts=4
+""set noet ci pi sts=0 sw=4 ts=4
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 inoremap <Leader>= <C-o>:syntax sync fromstart<CR>
-""set langmap=hk,jh,kj
-set langmap=hk,j`,kj,`h
+set langmap=hk,jh,kj
+""set langmap=hk,j`,kj,`h
 nnoremap K L
