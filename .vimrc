@@ -5,7 +5,6 @@ let mapleader = ","
 
 " undo remapped to shift u for using ext keyboard
 map <S-u> :u<cr>
-map u k
 
 cnoreabbrev W w
 "inoremap nn <Esc>`^
@@ -13,6 +12,8 @@ cnoreabbrev W w
 "imap nn <Esc>
 """ Nerdtree """
 map <Leader>1 <Esc>:NERDTreeToggle<cr> 
+"let NERDTreeShowHidden=1
+
 """" Tags """"
 map <Leader>2 <Esc>:TlistToggle<cr> 
 map <Leader>3 <Esc>:tabs<Cr>
@@ -170,7 +171,7 @@ nnoremap \l       : list buffers
 nnoremap \b \f \g : go back/forward/last-used
 
 " It's useful to show the buffer number in the status line.
-""set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 "let c = 1
 "while c <= 99
@@ -193,8 +194,9 @@ nmap <C-h> <C-w><C-h>
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-set background=dark
 syntax enable
+set background=dark
+colorscheme gruvbox
 let php_folding=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -206,7 +208,6 @@ augroup autosourcing
 	autocmd FileType c setlocal foldmethod=syntax
 	autocmd BufWritePost .vimrc source %
 augroup END
-colorscheme gruvbox
 
 "imap ;; <Esc>`^
 
