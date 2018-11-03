@@ -1,7 +1,32 @@
+set nocompatible                " choose no compatibility with legacy vi
+""filetype plugin indent on       " load file type plugins + indentation - had to disable for Vuldle install
+filetype off
+
+
+"""""""""" plugins """"""""
+"""""""""""""""""""""""""""
+so ~/.vim/plugins.vim
+
+set timeout ttimeoutlen=50
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+
+"" Whitespace
+set nowrap                      " don't wrap lines
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+"" Numbers
+set relativenumber
+let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree','tlist']
+"
 "Leader
 let mapleader = ","
 """""
-
 
 " undo remapped to shift u for using ext keyboard
 map <S-u> :u<cr>
@@ -46,8 +71,6 @@ map <Leader>a <Esc>/\<\k\w*<Cr>
 map <Leader>/ <Esc>:noh<Cr>
 map <Leader>q <Esc>/\<\h\w*\-*=<Cr>
 
-set relativenumber
-let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree','tlist']
 " From https://dougblack.io/words/a-good-vimrc.html
 " space open/closes folds
 nnoremap <space> za
@@ -64,66 +87,6 @@ nnoremap gV `[v`]
 "let g:ctrlp_working_path_mode = 0
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-" The following keys don't work as Alt does not work
-
-""""""""""""""""""""""""
-" Movement keys
-"""""""""""""""""""""""
-"map <A-n> <Left>
-"map <A-i> <Right>
-"map <A-e> <Down>
-"map <A-u> <Up>
-"imap <A-n> <Left>
-"imap <A-i> <Right>
-"imap <A-e> <Down>
-"imap <A-u> <Up>
-"map <A-h> ^
-"map <A-o> $
-"map <A-k> <PageDown>
-"map <A-y> <PageUp>
-"imap <A-h> <Home>
-"imap <A-o> <End>
-"imap <A-k> <PageDown>
-"imap <A-y> <PageUp>
-"imap <A-Space> <Esc>
-"""""""""""""""""""
-" Tabs keys
-"""""""""""""""""""
-"map <A-t><up> :tabr<cr>
-"map <A-t><down> :tabl<cr>
-map <A-t> :tabp<cr>""gt
-map <A-s> :tabn<cr>""gT
-
-""""""""""""""""""""
-" Hack for Alt Key
-""""""""""""""""""""
-"let c='a'
-"while c <= 'z'
-"  exec "set <A-".c.">=\e".c
-"  exec "imap \e".c." <A-".c.">"
-"  let c = nr2char(1+char2nr(c))
-"endw
-""""""""""""""""""""
-
-set timeout ttimeoutlen=50
-set nocompatible                " choose no compatibility with legacy vi
-set encoding=utf-8
-set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
-
-"" Whitespace
-set nowrap                      " don't wrap lines
-set backspace=indent,eol,start  " backspace through everything in insert mode
-
-"" Searching
-set hlsearch                    " highlight matches
-set incsearch                   " incremental searching
-set ignorecase                  " searches are case insensitive...
-set smartcase                   " ... unless they contain at least one capital letter
-
-"""""""""" plugins """"""""
-"""""""""""""""""""""""""""
-execute pathogen#infect()
 
 "" Manual Plugins """"
 
