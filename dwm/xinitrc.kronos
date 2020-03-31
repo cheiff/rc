@@ -8,17 +8,18 @@ do
 	LOCALTIME=$(date +%Z\=%Y-%m-%dT%H:%M)
 	OTHERTIME=$(TZ=America/New_York date +%Z\=%H:%M)
 	#IP=$(for i in `ip r`; do echo $i; done | grep -A 1 src | tail -n1) # can get confused if you use vmware
-  IP=$(ifconfig eno1|grep "inet "|head -1 |awk '{print $2}')
+    IP=$(ifconfig eno1|grep "inet "|head -1 |awk '{print $2}')
 	TEMP="$(($(cat /sys/class/thermal/thermal_zone0/temp) / 1000))C"
+    CPU=$(uptime |awk '{print $10}' | cut -d, -f1)
 
   ACPI=$(which acpi;echo $?)
 
 	if [ $ACPI -eq 0 ]
 	then
 		BAT="Bat. $(acpi -b | awk '{ print $4 " " $5 }' | tr -d ',')"
-		xsetroot -name "$IP $BAT $VOL $TEMP $OTHERTIME $LOCALTIME"
+		xsetroot -name "$CPU $IP $BAT $VOL $TEMP $OTHERTIME $LOCALTIME"
 	else
-		xsetroot -name "$IP $VOL $TEMP $OTHERTIME $LOCALTIME"
+		xsetroot -name "$CPU $IP $VOL $TEMP $OTHERTIME $LOCALTIME"
 	fi
 	sleep 20s
 done &
@@ -34,6 +35,6 @@ fi
 acb-slack &
 slack &
 whats-app-web &
-lando start acb &
+#lando start acb &
 firefox -P --no-remote &
 
