@@ -106,6 +106,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_javascript_checkers = ['jslint', 'phpcs', 'phpmd']
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 "" Other 
 set cursorline
